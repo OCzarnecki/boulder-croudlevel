@@ -1,6 +1,12 @@
 # Purpose
 This is a tiny script for grabbing the croud level from [https://www.boulderwelt-muenchen-ost.de/]. Basically just to satisfy my curiosity.
 
+# Installation
+After cloning the repository, make sure that the following is installed:
+- bs4
+- pathlib
+- lxml
+
 # Usage
 Just type
 ```

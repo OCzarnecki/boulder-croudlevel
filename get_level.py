@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # Extract the crowd-level from boulderwelt-muenchen-ost.de
 
 import requests

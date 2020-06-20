@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # Continuously log the crowd-level of boulderwelt-muenchen-ost.de
 
 import datetime
