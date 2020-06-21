@@ -11,8 +11,6 @@ INTERVAL = 15 * 60  # interval between log entries [s]
 LOG_DIR  = 'log/'
 
 class Logger:
-    
-    
     def __init__(self, logDir):
         self.logDir = logDir if logDir[-1] == '/' else logDir + '/'
         pathlib.Path(logDir).mkdir(parents=True, exist_ok=True)
