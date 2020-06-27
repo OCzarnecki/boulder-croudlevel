@@ -14,7 +14,7 @@ def getCrowdLevel():
     '''
     r = requests.get('https://www.boulderwelt-muenchen-ost.de/')
     if not r.ok:
-        return 'BADR%3d' % (r.status_codew)
+        return 'BADR%3d' % (r.status_code)
     
     soup = bs(r.text, features='lxml')
 
