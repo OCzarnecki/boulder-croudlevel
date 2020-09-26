@@ -1,5 +1,10 @@
 __pycache__/
-log/
+analysis/
 data/
+log/
 
 nohup.out
+.Rproj.user
+
+# Library
+status_reporter.py

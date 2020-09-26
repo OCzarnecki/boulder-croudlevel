@@ -6,6 +6,7 @@ After cloning the repository, make sure that the following is installed:
 - bs4
 - pathlib
 - lxml
+Then, obtain `status-reporter.py` from [https://github.com/OCzarnecki/status-reporter] and put it in the source dir. (I realize this is not the cleanest solution, but I don't have time to learn proper python dependency management right now…)
 
 # Usage
 Just type

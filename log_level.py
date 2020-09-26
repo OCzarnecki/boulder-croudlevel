@@ -7,6 +7,7 @@ import pathlib
 import time
 
 from get_level import getCrowdLevel
+from status_reporter import StatusReporter
 
 INTERVAL = 15 * 60  # interval between log entries [s]
 
@@ -35,8 +36,11 @@ def runLogLoop(storage):
         
     
 if __name__ == '__main__':
+    
     appStart = datetime.datetime.now().strftime('%Y-%m-%dT%H.%M.%S')
     logging.basicConfig(
         format="%(asctime)s %(levelname)s %(message)s",
         filename="log/log_level-%s.log" % (appStart))
+    
+    reporter = StatusReporter("http://localhost:2048", "boulderlogger")
     runLogLoop(Storage())
