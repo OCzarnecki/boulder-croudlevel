@@ -43,4 +43,5 @@ if __name__ == '__main__':
         filename="log/log_level-%s.log" % (appStart))
     
     reporter = StatusReporter("http://localhost:2048", "boulderlogger")
+    reporter.start()
     runLogLoop(Storage())
