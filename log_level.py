@@ -20,9 +20,10 @@ class Storage:
         return 'data/%s.csv' % (datetime.date.today())
 
     def record(self, s):
-        print(s)
+
         with open(self.currentDataFileName(), 'a') as logFile:
             logFile.write(s + '\n')
+
 
 
 def recordCurrentLevel(storage, scraper):
@@ -40,11 +41,13 @@ def runLogLoop(storage, scraper):
 
 
 if __name__ == '__main__':
+
     appStart = datetime.datetime.now().strftime('%Y-%m-%dT%H.%M.%S')
     logging.basicConfig(
         format="%(asctime)s %(levelname)s %(message)s",
         filename="log/log_level-%s.log" % (appStart))
 
     reporter = StatusReporter("http://localhost:2048", "boulderlogger")
+    reporter.start()
     scraper = scrapers.ScraperVauxwall()
     runLogLoop(Storage(), scraper)
