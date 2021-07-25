@@ -48,6 +48,11 @@ if __name__ == '__main__':
         filename="log/log_level-%s.log" % (appStart))
 
     reporter = StatusReporter("http://localhost:2048", "boulderlogger")
-    reporter.start()
-    scraper = scrapers.ScraperVauxwall()
-    runLogLoop(Storage(), scraper)
+    try:
+        reporter.start()
+    except Exception as e:
+        logging.exception(e)
+    finally:
+        scraper = scrapers.ScraperVauxwall()
+        runLogLoop(Storage(), scraper)
+
